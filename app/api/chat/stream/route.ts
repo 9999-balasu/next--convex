@@ -498,11 +498,23 @@ export async function POST(req: Request) {
                             });
                         } else if (event.event === "on_tool_end") {
                            
-                            const toolMessage = new ToolMessage({
+                            /*const toolMessage = new ToolMessage({
                                 tool_call_id: (event.data as any).tool_call_id || "unknown",
                                 name: event.name || "unknown",
                                 content: event.data.output,
                             });
+                              */
+
+                            interface EventData {
+                                tool_call_id?: string;
+                                output: string;
+                              }
+                              
+                              const toolMessage = new ToolMessage({
+                                tool_call_id: (event.data as EventData).tool_call_id || "unknown",
+                                name: event.name || "unknown",
+                                content: event.data.output,
+                              });
                               
                          
 
