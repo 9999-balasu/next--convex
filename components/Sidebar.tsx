@@ -123,11 +123,11 @@ function Sidebar() {
  const deleteChat = useMutation(api.chats.deleteChat);
 
   
-  const handleClick = () => {
+  /*const handleClick = () => {
     // TODO: Route to chat ID page
      router.push("/dashboard/chat");
     closeMobileNav();
-  };
+  };*/
 
 
 

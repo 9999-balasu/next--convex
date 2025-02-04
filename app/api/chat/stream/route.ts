@@ -498,19 +498,13 @@ export async function POST(req: Request) {
                             });
                         } else if (event.event === "on_tool_end") {
                            
-                           /* const toolMessage = new ToolMessage({
+                            const toolMessage = new ToolMessage({
                                 tool_call_id: (event.data as any).tool_call_id || "unknown",
                                 name: event.name || "unknown",
                                 content: event.data.output,
-                            });*/
+                            });
                               
-                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const toolMessage = new ToolMessage({
-    tool_call_id: (event.data as any).tool_call_id || "unknown",
-    name: event.name || "unknown",
-    content: event.data.output,
-});
-
+                         
 
                             await sendSSEMessage(writer, {
                                 type: StreamMessageType.ToolEnd,
