@@ -62,7 +62,12 @@ function ChatInterface({ chatId, initialMessages }: ChatInterfaceProps) {
             reader.releaseLock();
         }
     };
-
+    useEffect(() => {
+        if (currentTool) {
+            console.log("Current tool updated:", currentTool);
+        }
+    }, [currentTool]);
+    
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages, streamedResponse]);

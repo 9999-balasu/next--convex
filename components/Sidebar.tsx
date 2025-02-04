@@ -95,7 +95,7 @@ export default Sidebar;*/
 
 
 import { useRouter } from "next/navigation";
-import { useContext } from "react";
+//import { useContext } from "react";
 import { NavigationContext } from "@/lib/NavigationProvider";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -109,7 +109,7 @@ import { Id } from "@/convex/_generated/dataModel";
 import { useQuery } from "convex/react";
 
 
-import { useAuth } from "@clerk/clerk-react";
+//import { useAuth } from "@clerk/clerk-react";
 
 
 import ChatRow from "./ChatRow";
@@ -125,7 +125,7 @@ function Sidebar() {
   
   const handleClick = () => {
     // TODO: Route to chat ID page
-    // router.push("/dashboard/chat");
+     router.push("/dashboard/chat");
     closeMobileNav();
   };
 

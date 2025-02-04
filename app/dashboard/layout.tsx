@@ -32,7 +32,7 @@ export default function DashboardLayout({
     "use client";
 
     import { Authenticated } from "convex/react";
-    import { SignedIn } from "@clerk/nextjs";
+    //import { SignedIn } from "@clerk/nextjs";
     import Header from "@/components/Header";
     import { NavigationProvider } from "@/lib/NavigationProvider";
     import Sidebar from "@/components/Sidebar";
